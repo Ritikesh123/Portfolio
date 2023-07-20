@@ -6,25 +6,35 @@ import registration from '../assets/Registration-form.png'
 
 const Portfolio = () => {
 
+  
+
   const portfolios = [
     {
-      id : 1,
-      src :delivery
+      id: 1,
+      src: delivery,
+      demoURL: "https://food-delivery234.netlify.app/",
+      codeURL: "https://github.com/RitikeshRaj-RR/namaste-react"
     },
 
     {
       id : 2,
-      src :validationform
+      src :validationform,
+      demoURL: "https://formik-yup-validationform.netlify.app/",
+      codeURL: "https://github.com/RitikeshRaj-RR/Validation-formik_yup"
     },
 
     {
-      id : 3,
-      src :todoList
+      id: 3,
+      src: todoList,
+      demoURL: "https://react-todolist234.netlify.app/",
+      codeURL: "https://github.com/RitikeshRaj-RR/react-Todo"
     },
 
     {
-      id : 4,
-      src :registration
+      id: 4,
+      src: registration,
+      demoURL: "https://normal-registration-form.netlify.app/",
+      codeURL: "https://github.com/RitikeshRaj-RR/registration-form"
     },
   ]
 
@@ -32,7 +42,7 @@ const Portfolio = () => {
     <div name="portfolio" className='bg-gradient-to-b from-black to 
     bg-gray-800 w-full text-white md:h-screen'
     >
-      <div className='max-w-screen-lg p-4 mx-auto flex flex-col
+      <div className='max-w-screen-lg p-8 mx-auto flex flex-col
       justify-center w-full h-full'>
 
         <div className='pb-8'>
@@ -49,16 +59,20 @@ const Portfolio = () => {
         px-12 sm:px-0'>
 
         {
-          portfolios.map(({id, src}) =>(
+          portfolios.map(({id, src, demoURL, codeURL}) =>(
             <div key={id} className='shadow-md shadow-gray-600 rounded-lg'>
-          <img src={src} alt='' className='rounded-md
-          duration-200 hover:scale-105' />
+              <img src={src} alt='' className='rounded-md
+                  duration-200 hover:scale-105' />
 
           <div className='flex items-center justify-center'>
+            <a href={demoURL} target='_blank' rel='noopener noreferrer'>
             <button className='w-1/2 px-6 py-2 m-4 duration-200
             hover:scale-105'>Demo</button>
-            <button className='w-1/2 px-6 py-2 m-4 duration-200
+            </a>
+            <a href={codeURL} target='_blank' rel='noopener noreferrer'>
+            <button onClick="codeURL" className='w-1/2 px-6 py-2 m-4 duration-200
             hover:scale-105'>Code</button>
+            </a>
 
           </div>
         </div>
