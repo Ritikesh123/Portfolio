@@ -4,8 +4,9 @@ import html from "../assets/html.png";
 import css from "../assets/css.png";
 import javascript from "../assets/javascript.png";
 import reactImage from "../assets/react.png";
-// import nextjs from "../assets/nextjs.png";
-// import graphql from "../assets/graphql.png";
+import java from "../assets/java.jpg";
+import typescript from "../assets/typescript.png";
+import bootstrap from "../assets/bootstrap.png";
 import github from "../assets/github.png";
 import tailwind from "../assets/tailwind.png";
 
@@ -31,12 +32,30 @@ const Experience = () => {
     },
     {
       id: 4,
+      src: typescript,
+      title: "TypeScript",
+      style: "shadow-blue-500",
+    },
+    {
+      id: 5,
+      src: java,
+      title: "Java",
+      style: "shadow-red-500",
+    },
+    {
+      id: 6,
+      src: bootstrap,
+      title: "Bootstrap",
+      style: "shadow-purple-500",
+    },
+    {
+      id: 7,
       src: reactImage,
       title: "React",
       style: "shadow-blue-600",
     },
     {
-      id: 5,
+      id: 8,
       src: tailwind,
       title: "Tailwind",
       style: "shadow-sky-400",
@@ -44,7 +63,7 @@ const Experience = () => {
     
    
     {
-      id: 6,
+      id: 9,
       src: github,
       title: "GitHub",
       style: "shadow-gray-400",
