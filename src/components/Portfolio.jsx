@@ -1,4 +1,7 @@
 import React from 'react'
+import ecommerceWithFilter from "../assets/ecommercewithfilter.png"
+import productLogin from "../assets/productLogin.png"
+import carVisit from "../assets/Car_visit.png"
 import delivery from '../assets/Food-delivery234.png'
 import validationform from '../assets/Formik-yup-validationform.png'
 import todoList from '../assets/todoList.png'
@@ -11,27 +14,49 @@ const Portfolio = () => {
   const portfolios = [
     {
       id: 1,
+      src: ecommerceWithFilter,
+      demoURL: "https://ecommerce-with-filter.netlify.app/",
+      codeURL: "https://github.com/Ritikesh123/E-Commerce-Cart-or-Filter"
+    },
+
+    
+    {
+      id: 2,
+      src: productLogin,
+      demoURL: "https://productlogin.netlify.app/",
+      codeURL: "https://github.com/Ritikesh123/Auth-login_with-Product"
+    },
+
+    {
+      id: 3,
+      src: carVisit,
+      demoURL: "https://carvisit.netlify.app/",
+      codeURL: "https://github.com/Ritikesh123/car-classified"
+    },
+    
+    {
+      id: 4,
       src: delivery,
       demoURL: "https://food-delivery234.netlify.app/",
       codeURL: "https://github.com/RitikeshRaj-RR/namaste-react"
     },
 
     {
-      id : 2,
+      id : 5,
       src :validationform,
       demoURL: "https://formik-yup-validationform.netlify.app/",
       codeURL: "https://github.com/RitikeshRaj-RR/Validation-formik_yup"
     },
 
     {
-      id: 3,
+      id: 6,
       src: todoList,
       demoURL: "https://react-todolist234.netlify.app/",
       codeURL: "https://github.com/RitikeshRaj-RR/react-Todo"
     },
 
     {
-      id: 4,
+      id: 7,
       src: registration,
       demoURL: "https://normal-registration-form.netlify.app/",
       codeURL: "https://github.com/RitikeshRaj-RR/registration-form"
@@ -90,4 +115,4 @@ const Portfolio = () => {
   )
 }
 
-export default Portfolio
+export default Portfolio;

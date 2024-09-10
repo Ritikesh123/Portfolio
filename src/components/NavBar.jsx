@@ -16,15 +16,15 @@ const NavBar = () => {
             link:"about"
         },
         {
-            id:1,
+            id:3,
             link:"portfolio"
         },
         {
-            id:1,
+            id:4,
             link:"experience"
         },
         {
-            id:1,
+            id:5,
             link:"contact"
         },
     ]
