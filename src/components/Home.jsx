@@ -1,5 +1,5 @@
 import React from 'react';
-import MyPic from "../assets/Profile_pic.jpg";
+import MyPic from "../assets/Profile_pic.JPG";
 import {MdKeyboardArrowRight} from "react-icons/md";
 import { Link } from 'react-scroll';
 
