@@ -15,9 +15,12 @@ const Home = () => {
         I'm a Frontend Developer
       </h2>
       <p className="text-gray-500 py-4 max-w-md">
-        I have almost 3 years of experience building and designing software.
-        Currently, I love to work on web applications using technology like
-        React, TailwindCSS, JavaScript, and Redux.
+        With nearly 3 years of experience in building and designing software, 
+        I am passionate about crafting robust and scalable web applications. 
+        My expertise lies in leveraging modern technologies like React, TailwindCSS, 
+        JavaScript, and Redux to deliver high-performance, visually appealing solutions. 
+        I thrive on creating seamless, intuitive user experiences while maintaining clean 
+        and efficient code that ensures reliability and scalability.
       </p>
 
       <div>
