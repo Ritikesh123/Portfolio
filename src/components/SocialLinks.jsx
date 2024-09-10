@@ -41,7 +41,7 @@ const SocialLinks = () => {
                 Resume <BsFillPersonLinesFill size={30} />
                 </>
             ),
-            href:"/Developer-Ritikesh.pdf",
+            href:"/FullStack Developer - Ritikesh_Raj.pdf",
             style:"rounded-br-md",
             download: true,
             
