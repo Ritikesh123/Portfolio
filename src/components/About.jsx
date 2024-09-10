@@ -16,7 +16,7 @@ const About = () => {
         </div>
 
         <p className="text-lg mt-10">
-        Hi...... I'm Ritikesh Raj as a Frontend Developer with 1.5+ years of experience, 
+        Hi...... I'm Ritikesh Raj as a Frontend Developer almost 3 years of experience, 
         I am driven by a deep passion for crafting exceptional user experiences and 
         bringing creative designs to life through code.
         </p>
