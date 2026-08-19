@@ -1,47 +1,15 @@
-import React from 'react'
+import React from 'react';
+import { FiArrowUpRight, FiMail } from 'react-icons/fi';
 
-const Contacts = () => {
+export default function Contacts() {
   return (
-    <div name='contact' className='w-full h-screen bg-gradient-to-b from-black to
-     bg-gray-800 p-4 text-white'>
-
-        <div className='flex flex-col max-w-screen-lg p-4 justify-center
-        mx-auto h-full'>
-
-            <div className='pb-8'>
-                <p className='text-4xl font-bold inline border-b-4 border-b-gray-500'>Contact</p>
-                <p className='py-6'>Submit the form below to get in touch with me</p>
-            </div>
-
-            <div className='flex justify-center items-center'>
-                <form action='https://getform.io/f/7ad5dc55-1cde-492c-ba6c-f180517205df'
-                    method='POST' className='flex flex-col w-full md:w-1/2'>
-                        
-                    <input type='text' name='name' placeholder='Enter your name'
-                    className='p-2 bg-transparent border-2 rounded-md text-white focus:outline-none'
-                    />
-
-                    <input type='text' name='email' placeholder='Enter your mail'
-                    className='my-2 p-2 bg-transparent border-2 rounded-md text-white focus:outline-none'
-                    />
-                    <textarea name='message'
-                    placeholder='Enter your message' 
-                    rows='10' className='p-2 bg-transparent border-2 rounded-md
-                     text-white focus:outline-none'>
-                    </textarea>
-
-                    <button className='text-white bg-gradient-to-b 
-                    to bg-cyan-500 to-blue-500 px-6 py-3 my-8 
-                    mx-auto flex items-center rounded-md hover:scale-110
-                    duration-300'>Lets's talk</button>
-
-                </form>
-            </div>
-
-        </div>
-
-    </div>
-  )
+    <footer name="contact" className="border-t hairline bg-[#c7f36b] py-24 md:py-32">
+      <div className="section-shell">
+        <p className="eyebrow">04 / Contact</p>
+        <h2 className="display mt-6 max-w-4xl text-6xl font-extrabold md:text-8xl">Have a good<br />idea? <span className="text-white">Let’s talk.</span></h2>
+        <div className="mt-12 flex flex-wrap gap-3"><a href="https://wa.me/918538946710" target="_blank" rel="noreferrer" className="inline-flex items-center gap-3 rounded-full bg-[#101114] px-6 py-4 text-sm font-bold text-white transition hover:-translate-y-1">Chat on WhatsApp <FiMail /></a><a href="https://wa.me/918538946710" target="_blank" rel="noreferrer" className="inline-flex items-center rounded-full border border-[#101114]/30 px-6 py-4 text-sm font-bold transition hover:bg-white/40">+91 85389 46710</a></div>
+        <div className="mt-24 flex flex-col justify-between gap-4 border-t border-[#101114]/20 pt-5 text-xs font-bold md:flex-row"><span>© {new Date().getFullYear()} Ritikesh Raj · Patna, Bihar</span><span className="flex gap-5"><a href="https://github.com/Ritikesh123" target="_blank" rel="noreferrer">GitHub <FiArrowUpRight className="inline" /></a><a href="https://www.linkedin.com/in/ritikesh-raj-894aa3157/" target="_blank" rel="noreferrer">LinkedIn <FiArrowUpRight className="inline" /></a></span></div>
+      </div>
+    </footer>
+  );
 }
-
-export default Contacts

@@ -1,89 +1,50 @@
-import React, { useState } from 'react'
-import {FaBars, FaTimes} from "react-icons/fa";
+import React, { useState } from 'react';
+import { FiArrowUpRight, FiMenu, FiX } from 'react-icons/fi';
 import { Link } from 'react-scroll';
 
-const NavBar = () => {
+const items = ['about', 'work', 'experience', 'contact'];
 
-    const [nav, setNav] = useState(false);
+export default function NavBar() {
+  const [open, setOpen] = useState(false);
 
-    const links = [
-        {
-            id:1,
-            link:"home"
-        },
-        {
-            id:2,
-            link:"about"
-        },
-        {
-            id:3,
-            link:"portfolio"
-        },
-        {
-            id:4,
-            link:"experience"
-        },
-        {
-            id:5,
-            link:"contact"
-        },
-    ]
-  return (
-    
-      <div className="flex justify-between items-center w-full h-20
-        px-4 text-white bg-black fixed">
-     <div>
-      <h1 className="text-5xl font-signature ml-2"> Ritikesh Raj</h1>
-     </div>
-
-     <ul className="hidden md:flex">
-        {links.map(({id, link}) => (
-            <li key={id} className="px-4 cursor-pointer capitalize font-medium
-            text-gray-300 hover:scale-105 duration-200"
-            >
-
-
-           <Link to={link} 
-           smooth duration={800}>
-            {link}
-           </Link>
-
-
-            </li>
-         ))};
-    </ul>
-
-    <div onClick={() => setNav(!nav)}className="cursor-pointer 
-    pr-4 z-10 text-gray-500 md:hidden"
+  const go = (name) => (
+    <Link
+      to={name}
+      smooth
+      duration={700}
+      onClick={() => setOpen(false)}
+      className="cursor-pointer"
     >
-   {nav ? <FaTimes size={30}/> :<FaBars size={30}/>}
-    </div>
-
-    {nav && (
-        <ul className="flex flex-col justify-center items-center
-        absolute top-0 left-0 w-full h-screen bg-gradient-to-b
-        from-black to-gray-800 text-gray-500">
-            {links.map(({id, link}) => (
-                <li 
-                key={id} 
-                className="px-4 cursor-pointer capitalize py-6
-                text-gray-300 hover:scale-110 duration-200"
-                >
-                         
-           <Link 
-           onClick={() => setNav(!nav)} to={link} 
-           smooth duration={800}>
-            {link}
-           </Link>
-
-
-                </li>
-            ))}
-        </ul>
-     )}
-            
-    </div>
+      {name}
+    </Link>
   );
-};
 
-export default NavBar
+  return (
+    <header className="fixed left-0 top-0 z-50 w-full border-b hairline bg-[#f7f7f5]/90 backdrop-blur-md">
+      <nav className="section-shell flex h-[72px] items-center justify-between">
+        <Link to="home" smooth duration={700} className="cursor-pointer text-sm font-extrabold tracking-[-.04em]">
+          ritikesh-raj.dev<span className="text-[#8cae31]">/</span>
+        </Link>
+
+        <div className="hidden items-center gap-8 text-xs font-bold capitalize md:flex">
+          {items.map((item) => <span key={item}>{go(item)}</span>)}
+          <a href="https://wa.me/918538946710" target="_blank" rel="noreferrer" className="flex items-center gap-1 rounded-full bg-[#101114] px-4 py-2 text-white">
+            Let's talk <FiArrowUpRight />
+          </a>
+        </div>
+
+        <button aria-label="Toggle navigation" onClick={() => setOpen(!open)} className="text-2xl md:hidden">
+          {open ? <FiX /> : <FiMenu />}
+        </button>
+      </nav>
+
+      {open && (
+        <div className="section-shell border-t hairline py-5 md:hidden">
+          <div className="flex flex-col gap-5 text-2xl font-bold capitalize">
+            {items.map((item) => <span key={item}>{go(item)}</span>)}
+          </div>
+        </div>
+      )}
+    </header>
+  );
+}

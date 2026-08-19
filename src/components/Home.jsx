@@ -1,55 +1,30 @@
 import React from 'react';
-import MyPic from "../assets/Profile_pic.jpg";
-import {MdKeyboardArrowRight} from "react-icons/md";
+import { FiArrowUpRight, FiGithub, FiLinkedin } from 'react-icons/fi';
 import { Link } from 'react-scroll';
+import resume from '../assets/Ritikesh_Raj.pdf';
 
-const Home = () => {
+const stats = [
+  ['5+', 'years building frontend products'],
+  ['4', 'core frontend strengths'],
+  ['3', 'companies across my career'],
+];
+
+export default function Home() {
   return (
-    <div
-  name="home"
-  className="h-screen w-full bg-gradient-to-b from-black via-black to-gray-800 flex items-center justify-center"
->
-<div className="max-w-screen-lg mx-auto flex flex-col items-center justify-center h-full px-4 md:flex-row">
-  <div className="flex flex-col justify-center h-full items-center md:items-start text-center md:text-left">
-    <h2 className="text-4xl sm:text-7xl font-bold text-white">
-      I'm a Frontend Developer
-    </h2>
-    <p className="text-gray-500 py-4 max-w-md">
-      With nearly 3 years of experience in building and designing software, 
-      I am passionate about crafting robust and scalable web applications. 
-      My expertise lies in leveraging modern technologies like React, TailwindCSS, 
-      JavaScript, and Redux to deliver high-performance, visually appealing solutions. 
-      I thrive on creating seamless, intuitive user experiences while maintaining clean 
-      and efficient code that ensures reliability and scalability.
-    </p>
+    <section id="home" name="home" className="pt-32 md:pt-44">
+      <div className="section-shell">
+        <p className="eyebrow">Hello, I’m Ritikesh Raj <span className="text-lg">👋</span></p>
+        <h1 className="display mt-7 max-w-5xl text-[clamp(3.2rem,8vw,7.5rem)] font-extrabold">I build frontend products with strong UI/UX and scalable systems.</h1>
+        <div className="mt-8 flex flex-wrap items-center gap-2 text-sm font-semibold text-[#686b73]">
+          <span>Senior ReactJS Developer</span><span>·</span><span>React.js</span><span>·</span><span>Next.js</span><span>·</span><span>TypeScript</span><span>·</span><span>Agentic AI</span>
+        </div>
+        <div className="mt-10 flex flex-wrap gap-3"><Link to="work" smooth duration={700} className="flex cursor-pointer items-center gap-2 rounded-full bg-[#101114] px-5 py-3 text-sm font-bold text-white transition hover:-translate-y-1">See selected work <FiArrowUpRight /></Link><a href={resume} download className="rounded-full border border-[#cfd2c3] px-5 py-3 text-sm font-bold transition hover:bg-white">Download CV</a></div>
+        <div className="mt-8 flex gap-5 text-xl"><a aria-label="LinkedIn" href="https://www.linkedin.com/in/ritikesh-raj-894aa3157/" target="_blank" rel="noreferrer"><FiLinkedin /></a><a aria-label="GitHub" href="https://github.com/Ritikesh123" target="_blank" rel="noreferrer"><FiGithub /></a><a href="https://wa.me/918538946710" target="_blank" rel="noreferrer" className="text-sm font-bold">WhatsApp ↗</a></div>
 
-    <div className="mb-4 md:mb-0"> {/* Added margin-bottom for smaller screens */}
-      <Link
-        to="portfolio"
-        smooth
-        duration={800}
-        className="group text-white w-fit px-6 py-3 my-2 flex items-center rounded-md bg-gradient-to-r from-cyan-500 to-blue-500 cursor-pointer"
-      >
-        Portfolio
-        <span className="group-hover:rotate-90 duration-300">
-          <MdKeyboardArrowRight size={25} className="ml-1" />
-        </span>
-      </Link>
-    </div>
-  </div>
-
-  <div className="mt-6 md:mt-0 mb-2"> {/* Adjusted margin-top for smaller screens */}
-    <img
-      src={MyPic}
-      alt="my profile"
-      className="rounded-2xl mx-auto w-2/3 md:w-full"
-    />
-  </div>
-</div>
-
-</div>
-
-  )
+        <div className="mt-24 grid border-y hairline sm:grid-cols-3">
+          {stats.map(([value, label]) => <div key={label} className="border-b hairline py-6 sm:border-b-0 sm:border-r sm:px-6 first:sm:pl-0 last:border-0"><p className="text-4xl font-extrabold tracking-[-.06em]">{value}</p><p className="mt-2 max-w-[170px] text-sm leading-5 text-[#686b73]">{label}</p></div>)}
+        </div>
+      </div>
+    </section>
+  );
 }
-
-export default Home

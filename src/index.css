@@ -1,14 +1,24 @@
-@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
-
-@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&display=swap');
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
-
-@layer base{
-  html {
-    font-family: 'Raleway', sans-serif;
-  }
+:root { --ink:#101114; --muted:#686b73; --paper:#f7f7f5; --line:#deded9; --accent:#c7f36b; }
+html { scroll-behavior:smooth; }
+body { margin:0; background:var(--paper); color:var(--ink); font-family:'Manrope',sans-serif; -webkit-font-smoothing:antialiased; }
+* { box-sizing:border-box; } ::selection { background:var(--accent); color:var(--ink); }
+a,button { -webkit-tap-highlight-color:transparent; } a:focus-visible,button:focus-visible { outline:3px solid #8cae31; outline-offset:5px; }
+img { max-width:100%; }
+.mono { font-family:'DM Mono',monospace; } .section-shell { width:min(1180px,calc(100% - 40px)); margin:0 auto; }
+.eyebrow { color:#777a80; font:500 11px 'DM Mono',monospace; letter-spacing:.13em; text-transform:uppercase; }
+.display { letter-spacing:-.07em; line-height:.95; text-wrap:balance; } .hairline { border-color:var(--line); }
+.mesh-light { background:radial-gradient(circle at 10% 10%,rgba(199,243,107,.22),transparent 28%),radial-gradient(circle at 90% 70%,rgba(122,177,255,.13),transparent 26%),#fff; }
+.mesh-dark { background:radial-gradient(circle at 85% 15%,rgba(199,243,107,.2),transparent 25%),radial-gradient(circle at 15% 80%,rgba(89,118,255,.14),transparent 30%),#f0f4e7; }
+@media(max-width:768px){
+  body { background:var(--paper); }
+  .section-shell { width:min(100% - 32px,1180px); }
+  .display { letter-spacing:-.055em; }
+}
+@media(max-width:480px){
+  .section-shell { width:calc(100% - 28px); }
+  .eyebrow { font-size:10px; letter-spacing:.1em; }
 }

@@ -1,102 +1,46 @@
-import React from "react";
+import React from 'react';
 
-import html from "../assets/html.png";
-import css from "../assets/css.png";
-import javascript from "../assets/javascript.png";
-import reactImage from "../assets/react.png";
-import java from "../assets/java.jpg";
-import typescript from "../assets/typescript.png";
-import bootstrap from "../assets/bootstrap.png";
-import github from "../assets/github.png";
-import tailwind from "../assets/tailwind.png";
+const skills = [
+  'React.js', 'Next.js', 'TypeScript', 'JavaScript ES6+', 'Redux',
+  'REST & GraphQL', 'SSR / PWA / MFE', 'Tailwind / SCSS / MUI',
+  'Node.js & Express', 'Agentic AI & LLMs', 'Docker / CI-CD', 'AWS / Azure',
+];
 
-const Experience = () => {
-  const techs = [
-    {
-      id: 1,
-      src: html,
-      title: "HTML",
-      style: "shadow-orange-500",
-    },
-    {
-      id: 2,
-      src: css,
-      title: "CSS",
-      style: "shadow-blue-500",
-    },
-    {
-      id: 3,
-      src: javascript,
-      title: "JavaScript",
-      style: "shadow-yellow-500",
-    },
-    {
-      id: 4,
-      src: typescript,
-      title: "TypeScript",
-      style: "shadow-blue-500",
-    },
-    {
-      id: 5,
-      src: java,
-      title: "Java",
-      style: "shadow-red-500",
-    },
-    {
-      id: 6,
-      src: bootstrap,
-      title: "Bootstrap",
-      style: "shadow-purple-500",
-    },
-    {
-      id: 7,
-      src: reactImage,
-      title: "React",
-      style: "shadow-blue-600",
-    },
-    {
-      id: 8,
-      src: tailwind,
-      title: "Tailwind",
-      style: "shadow-sky-400",
-    },
-    
-   
-    {
-      id: 9,
-      src: github,
-      title: "GitHub",
-      style: "shadow-gray-400",
-    },
-  ];
+const roles = [
+  ['Nov 2024 — Present', 'Nimap Infotech', 'Senior Frontend Developer', 'Built scalable React.js and Next.js applications for Forbes India, CNBC TV18 and News18 Features. Developed reusable UI libraries, REST integrations, SSR and SEO improvements, caching strategies, performance tuning, code reviews and mentoring.'],
+  ['Oct 2023 — Aug 2024', 'Sapphire Human Capital', 'Frontend Developer', 'Rebuilt DEI.jobs with React.js, SSR optimization and reusable UI architecture. Developed Salary Hike Calculator and HRA Exemption Tool with API integrations, responsive routing and cross-browser support.'],
+  ['Aug 2021 — Mar 2023', 'Tech Mahindra', 'Web Specialist', 'Developed responsive web pages and reusable React.js components. Improved UI responsiveness and cross-browser compatibility while supporting frontend debugging, enhancements and releases.'],
+];
 
+export default function Experience() {
   return (
-    <div
-      name="experience"
-      className="bg-gradient-to-b from-gray-800 to-black w-full h-screen"
-    >
-      <div className="max-w-screen-lg mx-auto p-4 flex flex-col justify-center w-full h-full text-white">
+    <section name="experience" className="mesh-dark border-t hairline py-24 text-[#101114] md:py-32">
+      <div className="section-shell grid gap-14 md:grid-cols-[.7fr_1.3fr]">
         <div>
-          <p className="text-4xl font-bold border-b-4 border-gray-500 p-2 inline">
-            Experience
-          </p>
-          <p className="py-6">These are the technologies I've worked with</p>
+          <p className="eyebrow">03 / Career snapshot</p>
+          <h2 className="display mt-5 text-5xl font-extrabold md:text-7xl">
+            Recent<br /><span className="text-[#7d9d28]">roles.</span>
+          </h2>
         </div>
 
-        <div className="w-full grid grid-cols-2 sm:grid-cols-3 gap-8 text-center py-8 px-12 sm:px-0">
-          {techs.map(({ id, src, title, style }) => (
-            <div
-              key={id}
-              className={`shadow-md hover:scale-105 duration-500 py-2 rounded-lg ${style}`}
-            >
-              <img src={src} alt="" className="w-20 mx-auto" />
-              <p className="mt-4">{title}</p>
-            </div>
-          ))}
+        <div>
+          <div className="mb-12 space-y-7">
+            {roles.map(([date, company, title, detail]) => (
+              <div key={company} className="grid gap-2 border-b border-[#101114]/15 pb-7 sm:grid-cols-[145px_1fr]">
+                <p className="eyebrow">{date}</p>
+                <div>
+                  <h3 className="text-lg font-extrabold">{title} <span className="font-normal text-[#686b73]">@ {company}</span></h3>
+                  <p className="mt-2 text-sm leading-6 text-[#686b73]">{detail}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+
+          <div className="flex flex-wrap gap-x-8 gap-y-5">
+            {skills.map((skill) => <span key={skill} className="text-base font-semibold text-[#303238]">{skill}</span>)}
+          </div>
         </div>
       </div>
-    </div>
+    </section>
   );
-};
-
-export default Experience;
+}
