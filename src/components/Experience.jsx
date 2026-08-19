@@ -14,30 +14,30 @@ const roles = [
 
 export default function Experience() {
   return (
-    <section name="experience" className="mesh-dark border-t hairline py-24 text-[#101114] md:py-32">
+    <section name="experience" className="mesh-dark my-6 py-24 text-white md:my-8 md:py-32">
       <div className="section-shell grid gap-14 md:grid-cols-[.7fr_1.3fr]">
         <div>
           <p className="eyebrow">03 / Career snapshot</p>
           <h2 className="display mt-5 text-5xl font-extrabold md:text-7xl">
-            Recent<br /><span className="text-[#7d9d28]">roles.</span>
+            Recent<br /><span className="text-[#ff8299]">roles.</span>
           </h2>
         </div>
 
         <div>
           <div className="mb-12 space-y-7">
             {roles.map(([date, company, title, detail]) => (
-              <div key={company} className="grid gap-2 border-b border-[#101114]/15 pb-7 sm:grid-cols-[145px_1fr]">
+              <div key={company} className="grid gap-2 rounded-2xl border border-white/10 bg-white/[.035] p-5 sm:grid-cols-[145px_1fr]">
                 <p className="eyebrow">{date}</p>
                 <div>
-                  <h3 className="text-lg font-extrabold">{title} <span className="font-normal text-[#686b73]">@ {company}</span></h3>
-                  <p className="mt-2 text-sm leading-6 text-[#686b73]">{detail}</p>
+                  <h3 className="text-lg font-extrabold">{title} <span className="font-normal text-[#aeb0b9]">@ {company}</span></h3>
+                  <p className="mt-2 text-sm leading-6 text-[#aeb0b9]">{detail}</p>
                 </div>
               </div>
             ))}
           </div>
 
           <div className="flex flex-wrap gap-x-8 gap-y-5">
-            {skills.map((skill) => <span key={skill} className="text-base font-semibold text-[#303238]">{skill}</span>)}
+            {skills.map((skill) => <span key={skill} className="rounded-full border border-white/10 bg-white/[.035] px-3 py-2 text-sm font-semibold text-[#d9dbe3]">{skill}</span>)}
           </div>
         </div>
       </div>

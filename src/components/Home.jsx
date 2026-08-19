@@ -18,7 +18,7 @@ export default function Home() {
         <div className="mt-8 flex flex-wrap items-center gap-2 text-sm font-semibold text-[#686b73]">
           <span>Senior ReactJS Developer</span><span>·</span><span>React.js</span><span>·</span><span>Next.js</span><span>·</span><span>TypeScript</span><span>·</span><span>Agentic AI</span>
         </div>
-        <div className="mt-10 flex flex-wrap gap-3"><Link to="work" smooth duration={700} className="flex cursor-pointer items-center gap-2 rounded-full bg-[#101114] px-5 py-3 text-sm font-bold text-white transition hover:-translate-y-1">See selected work <FiArrowUpRight /></Link><a href={resume} download className="rounded-full border border-[#cfd2c3] px-5 py-3 text-sm font-bold transition hover:bg-white">Download CV</a></div>
+          <div className="mt-10 flex flex-wrap gap-3"><Link to="work" smooth duration={700} className="flex cursor-pointer items-center gap-2 rounded-full bg-white px-5 py-3 text-sm font-bold text-[#101114] transition hover:-translate-y-1">See selected work <FiArrowUpRight /></Link><a href={resume} download className="rounded-full border border-white/20 px-5 py-3 text-sm font-bold transition hover:bg-white/10">Download CV</a></div>
         <div className="mt-8 flex gap-5 text-xl"><a aria-label="LinkedIn" href="https://www.linkedin.com/in/ritikesh-raj-894aa3157/" target="_blank" rel="noreferrer"><FiLinkedin /></a><a aria-label="GitHub" href="https://github.com/Ritikesh123" target="_blank" rel="noreferrer"><FiGithub /></a><a href="https://wa.me/918538946710" target="_blank" rel="noreferrer" className="text-sm font-bold">WhatsApp ↗</a></div>
 
         <div className="mt-24 grid border-y hairline sm:grid-cols-3">
