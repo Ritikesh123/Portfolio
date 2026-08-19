@@ -14,7 +14,7 @@ export default function Home() {
     <section id="home" name="home" className="pt-32 md:pt-44">
       <div className="section-shell">
         <p className="eyebrow">Hello, I’m Ritikesh Raj <span className="text-lg">👋</span></p>
-        <h1 className="display mt-7 max-w-5xl text-[clamp(3.2rem,8vw,7.5rem)] font-extrabold">I build frontend products with strong UI/UX and scalable systems.</h1>
+          <h1 className="display mt-7 max-w-5xl bg-gradient-to-r from-white via-[#f7c6d0] to-[#ff8299] bg-clip-text text-[clamp(3.2rem,8vw,7.5rem)] font-extrabold text-transparent">Hello, I’m Ritikesh Raj 👋. I build frontend products with strong UI/UX and scalable systems.</h1>
         <div className="mt-8 flex flex-wrap items-center gap-2 text-sm font-semibold text-[#686b73]">
           <span>Senior ReactJS Developer</span><span>·</span><span>React.js</span><span>·</span><span>Next.js</span><span>·</span><span>TypeScript</span><span>·</span><span>Agentic AI</span>
         </div>
